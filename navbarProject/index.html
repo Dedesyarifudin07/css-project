@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Latihan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <nav class="nav">
+                <div class="brand">Design</div>
+                <ul >
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Product</a></li>
+                </ul>
+                <img src="hamburger.png"  class="hamburger" alt="" height="20" width="20">
+            </nav>
+        </div>
+</body>
+<script>
+    const Toggler = document.querySelector('.hamburger');
+    const Nav = document.querySelector('.nav ul');
+    let img= document.querySelector('img');
+
+    Toggler.addEventListener('click',() => {
+        Nav.classList.toggle('active');
+        //jika togle src nya sama dengan yang ada di bawah ini maka ganti gambarnya
+        if(Toggler.src.match("hamburger.png")){
+            Toggler.src = "x.png"
+        }else{
+            Toggler.src = 'hamburger.png'
+        }
+        // if(img.match('hamburger.png')){
+        //     img = 'x.png'
+        // }else{
+        //     img='hamburger.png'
+        // }
+        
+        
+    })
+
+    img.addEventListener('click',() => {
+    })
+
+</script>
+</html>
